@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIBEMART</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>VIBEMART</h1>
+            <nav><div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+                <ul>
+                    
+                    <li><a href="#" onclick="closeMenuAndNavigate('home')">Home</a></li>
+                   
+                    <li><a href="#" onclick="closeMenuAndNavigate('about')">About</a></li>
+                    <li><a href="#" onclick="toggleLoginPopup()" id="loginNav">Login</a></li>
+                    <li><a href="#">Cart <span class="cart-counter" id="cartCounter">0</span></a></li>
+                    <li id="welcomeNav" style="display: none;">Welcome Back, <span id="welcomeUser"></span></li>
+                
+                
+                
+                
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="search-bar" id="searchBar">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <button onclick="searchProducts()">Search</button>
+    </div>
+
+    <section class="hero" id="hero">
+        <h1>Welcome to VIBEMART</h1>
+        <p>Find your favorite products here!</p>
+    </section>
+
+    <section class="categories" id="categories">
+        <button onclick="filterProducts('All')">All</button>
+        <button onclick="filterProducts('Electronics')">Electronics</button>
+        <button onclick="filterProducts('Clothes')">Clothes</button>
+        <button onclick="filterProducts('Accessories')">Accessories</button>
+        <button onclick="filterProducts('Books')">Books</button>
+    </section>
+
+    <section class="products" id="products">
+
+<!-- Clothes -->
+        <div class="product" data-category="Clothes">
+            <img src="t-shirt.png" alt="Product 7">
+            <h3>Black t-SHIRT</h3>
+            <p>$15.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Clothes">
+            <img src="white-pants.png" alt="Product 8">
+            <h3>White Pant</h3>
+            <p>$20.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Clothes">
+            <img src="shoes.png" alt="Product 9">
+            <h3>AIR JORDAN</h3>
+            <p>$100.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Clothes">
+            <img src="white-shirt.png" alt="Product 10">
+            <h3>White t-SHIRT</h3>
+            <p>$15.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Clothes">
+            <img src="hoddie.png" alt="Product 11">
+            <h3>White Hoddie</h3>
+            <p>$15.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Clothes">
+            <img src="jacket.png" alt="Product 11">
+            <h3>Leather Jacket</h3>
+            <p>$15.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <!-- Electronics -->
+        <div class="product" data-category="Electronics">
+            <img src="laptop.png" alt="Product 1">
+            <h3>Gaming Laptop</h3>
+            <p>$500.00</p>
+            
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Electronics">
+            <img src="heaphone.png" alt="Product 2">
+            <h3>HEADSET</h3>
+            <p>$50.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Electronics">
+            <img src="mouse.png" alt="Product 3">
+            <h3>Mouse</h3>
+            <p>$20.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Electronics">
+            <img src="keyboard.png" alt="Product 4">
+            <h3>Keyboard</h3>
+            <p>$50.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Electronics">
+            <img src="tv.png" alt="Product 5">  
+            <h3>TV</h3>
+            <p>$200.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Electronics">
+            <img src="phone.png" alt="Product 6">  
+            <h3>Phone</h3>
+            <p>$100.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+<!-- Accessories -->
+        <div class="product" data-category="Accessories">
+            <img src="sunglases.png" alt="Product 12">
+            <h3>SUNGLASES</h3>
+            <p>$10.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Accessories">
+            <img src="handbag.png" alt="Product 12">
+            <h3>Handbag</h3>
+            <p>$80.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Accessories">
+            <img src="purfumes.jpg" alt="Product 12">
+            <h3>Purfume</h3>
+            <p>$30.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Accessories">
+            <img src="rolex.jpeg" alt="Product 12">
+            <h3>ROLEX WATCH</h3>
+            <p>$500.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Accessories">
+            <img src="charger.jpg" alt="Product 12">
+            <h3>Mobile Phone Charger</h3>
+            <p>$10.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Accessories">
+            <img src="ski-mask.png" alt="Product 12">
+            <h3>Ski-Mask</h3>
+            <p>$15.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+<!-- BOOKS -->
+        <div class="product" data-category="Books">
+            <img src="48lawsofpower.png" alt="Product 12">
+            <h3>48 laws of Power</h3>
+            <p>$20.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Books">
+            <img src="atomichabit.png" alt="Product 12">
+            <h3>ATOMIC HABITS</h3>
+            <p>$20.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Books">
+            <img src="thealchemist.png" alt="Product 12">
+            <h3>THE ALCEMIST</h3>
+            <p>$20.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Books">
+            <img src="theartoflettinggo.jpg" alt="Product 12">
+            <h3>THE ART OF LETTING GO</h3>
+            <p>$20.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Books">
+            <img src="richdadpoordad.jpg" alt="Product 12">
+            <h3>RICH DAD POOR DAD</h3>
+            <p>$20.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product" data-category="Books">
+            <img src="theageofrevolution.jpg" alt="Product 12">
+            <h3>THE AGE OF REVOLUTION</h3>
+            <p>$20.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </section>
+    <section class="about-page" id="aboutPage" style="display: none;">
+        <h2>About VIBEMART</h2>
+        <p>VIBEMART is a online shopping Website for Electronics, Clothes, Accessories, and Books.</p>
+        <p>We strive to provide the best products at the most affordable prices.</p>
+        <h1>DEVS</h1>
+        
+        <div class="devs" >
+            <img src="himal.png" alt="Product 12">
+            <h3>Himal Gaire</h3>
+            <img src="yug.jpg" alt="Product 12">
+            <h3>Yugratna Shrees</h3>
+        </div>
+    </section>
+
+    <div class="login-popup" id="loginPopup">
+        <h2 id="popupTitle">Login</h2>
+        <div id="loginForm">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+        <div id="logoutMessage" style="display: none;">
+            <p>Welcome back, <span id="loggedInUser"></span>!</p>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 VIBEMART. All rights reserved.<br><a href="https://www.facebook.com/profile.php?id=61550072470516" class="hii">Himal Gaire</a> <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 38" width="26px" height="26px"><path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"/><path fill="#fff" d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"/></svg>
+            <br><a href="https://www.facebook.com/profile.php?id=100077451576556">Yugratna Shrees</a><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="26px" height="26px"><path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"/><path fill="#fff" d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"/></svg></p>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+
+        function filterProducts(category) {
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                if (product.getAttribute('data-category') === category || category === 'All') {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+            const categoryButtons = document.querySelectorAll('.categories button');
+
+categoryButtons.forEach(button => button.classList.remove('active'));
+
+categoryButtons.forEach(button => {
+    if (button.textContent === category) {
+        button.classList.add('active');
+    }
+});
+
+        }
+
+        function searchProducts() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                const productName = product.querySelector('h3').textContent.toLowerCase();
+                if (productName.includes(searchInput)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById('cartCounter').textContent = cartCount;
+            alert(" ADDED TO CART")
+        }
+
+        function toggleLoginPopup() {
+            const loginPopup = document.getElementById('loginPopup');
+            loginPopup.classList.toggle('active');
+        }
+
+        function showHomePage() {
+            document.getElementById('hero').style.display = 'block';
+            document.getElementById('categories').style.display = 'flex';
+            document.getElementById('products').style.display = 'flex';
+            document.getElementById('aboutPage').style.display = 'none';
+        }
+
+        function showAboutPage() {
+            document.getElementById('hero').style.display = 'none';
+            document.getElementById('categories').style.display = 'none';
+            document.getElementById('products').style.display = 'none';
+            document.getElementById('aboutPage').style.display = 'block';
+        }
+        function toggleMenu() {
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('active');
+        }
+
+        
+        window.onload = function() {
+            toggleLoginPopup();
+        }
+        function closeMenuAndNavigate(action) {
+    const navMenu = document.querySelector('nav ul');
+    navMenu.classList.remove('active');
+    if (action === 'home') showHomePage();
+    else if (action === 'shop') showShopPage();
+    else if (action === 'about') showAboutPage();
+    else if (action === 'login') toggleLoginPopup();
+}
+
+let isLoggedIn = false;
+let currentUser = '';
+
+window.onload = () => {
+    checkLoginState();
+};
+
+function checkLoginState() {
+    const loginForm = document.getElementById('loginForm');
+    const loginNav = document.getElementById('loginNav');
+    const welcomeNav = document.getElementById('welcomeNav');
+    const welcomeUser = document.getElementById('welcomeUser');
+
+    if (isLoggedIn) {
+        loginForm.style.display = 'none'; 
+        welcomeNav.style.display = 'inline'; 
+        welcomeUser.textContent = currentUser;
+        loginNav.style.display = 'none'; 
+    } else {
+        loginForm.style.display = 'block'; 
+        welcomeNav.style.display = 'none'; 
+        loginNav.style.display = 'inline'; 
+    }
+}
+
+function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username && password) {
+        isLoggedIn = true;
+        currentUser = username;
+        alert(`Logged in as ${currentUser}`);
+        checkLoginState();
+        closeLoginPopup();
+    } else {
+        alert('Please enter valid credentials.');
+    }
+}
+
+function closeLoginPopup() {
+    document.getElementById('loginPopup').classList.remove('active');
+}
+
+function toggleLoginPopup() {
+    document.getElementById('loginPopup').classList.toggle('active');
+}
+
+function logout() {
+    isLoggedIn = false;
+    currentUser = '';
+    alert('You have logged out.');
+    checkLoginState();
+}
+
+   
+    </script>
+</body>
+</html>
